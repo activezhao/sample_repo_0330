@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package sample_module_0330.sample_package_0330;
+
+option go_package="github.com/activezhao/{{ repo }}/aaa/bbb/sample_module_0330/sample_package_0330/grpc-go/stubs";
+
+
+service Zhaoh0330 {
+    rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+
+message HelloRequest {
+    string msg = 1;
+}
+message HelloReply {
+    string msg = 1;
+    string code = 2;
+}
