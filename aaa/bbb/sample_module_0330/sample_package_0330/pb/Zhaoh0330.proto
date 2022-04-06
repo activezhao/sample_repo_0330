@@ -13,6 +13,11 @@ message HelloReply {
 }
 
 service Zhaoh0330 {
-    rpc SayHello (HelloRequest) returns (HelloReply);
+    // rpc SayHello (HelloRequest) returns (HelloReply);
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+        option (google.api.http) = {
+            get: "/api/v1/hello"
+        };
+   };
 }
 
